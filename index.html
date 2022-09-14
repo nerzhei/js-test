@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form>
+<form onsubmit=openInNewTab(`https://efactura.hiopos-it.com.uy/getPdfDocument?rut=${ruc.value}&serie=${serie.value}&numero=${num_comp.value}&tipoCfe=${tipo_comp.value}&hash=${codigo.value}`)>
     <h2>Verificar CFE</h2>
     <div>
         <label for="ruc">RUC Emisor</label>
@@ -36,7 +36,7 @@
     </div>
 
 
-    <input value="Verificar" type="submit" onclick="openInNewTab(`https://efactura.hiopos-it.com.uy/getPdfDocument?rut=${ruc.value}&serie=${serie.value}&numero=${num_comp.value}&tipoCfe=${tipo_comp.value}&hash=${codigo.value}`)">
+    <input value="Verificar" type="submit">
 
 
 
