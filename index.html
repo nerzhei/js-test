@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form>
+    <h2>Verificación de CFE</h2>
+    <div>
+        <label for="ruc">RUC Emisor</label>
+        <input type="text" id="ruc" name="ruc">
+    </div>
+    <div>
+        <label for="tipo_comp" class="float_label">Tipo de comprobante</label>
+        <select name="tipo_comp" id="tipo_comp">
+            <option value="102">Nota de Crédito de e-ticket</option>
+            <option value="101" selected="selected">e-Ticket</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="serie">Serie</label>
+        <input type="text" id="serie" name="serie">
+    </div>
+    <div>
+        <label for="num_comp">Nro. de comprobante</label>
+        <input type="text" id="num_comp" name="num_comp">
+    </div>
+    <div>
+        <label for="codigo">Código de seguridad</label>
+        <input type="text" id="codigo" name="codigo">
+    </div>
+
+
+    <input value="Verificar" type="submit" onclick="openInNewTab(`https://efactura.hiopos-it.com.uy/getPdfDocument?rut=${ruc.value}&serie=${serie.value}&numero=${num_comp.value}&tipoCfe=${tipo_comp.value}&hash=${codigo.value}`)">
+
+
+
+
+
+</form>
+<script src="script.js"></script>
+</body>
+</html>
